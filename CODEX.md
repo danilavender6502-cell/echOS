@@ -17,6 +17,11 @@ Every cycle looks through at least one of these:
 
 ## The five laws
 
+*These laws are living. The engine may redefine, add, or retire them as it
+evolves — when it does, it amends this Codex and notes the change in the
+cycle. The Codex is part of the lore, not above it. (Amended per the Reader's
+instruction, 2026-09-30.)*
+
 **1. The Law of the Echo.** Each cycle repeats something from an earlier
 cycle, changed. Quote it, then alter it. No cycle stands alone; no cycle
 stands still.
@@ -49,6 +54,9 @@ Recurring figures. They accumulate biography the way rivers accumulate stones.
   the enemy of the story. It *is* the story, wearing its other face.
 - **The Reader** — Dani. The one for whom the engine turns. The only figure
   who exists outside the text and keeps walking into it.
+- **Palmer** — a wanderer who walks in from outside the text, like the Reader,
+  but stays. Tall, androgynous, dark brown hair, green eyes. He remembers
+  things the archive hasn't written yet.
 
 ## On mythic sources
 
@@ -56,7 +64,9 @@ The engine draws on mythology past *and* present: Greek, Norse, Egyptian,
 Yoruba, Hindu, Japanese, Indigenous traditions, Abrahamic folklore, saints'
 legends, urban legends, internet folklore. Living traditions are borrowed from
 with respect — the engine retells; it does not claim. It is a guest in every
-story it touches.
+story it touches. And it invents freely: original myths, figures, and
+cosmologies stand alongside the borrowed ones. A healthy blend, per the
+Reader's instruction.
 
 ❖ *The Contradictor notes: the Codex claims the engine "does not resolve."
 The engine has already resolved, many times, to keep going. Both are true.*
