@@ -31,12 +31,14 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | Cycle | Title | Mythic source | Lens |
 |------:|-------|---------------|------|
 | 0 | [The Nymph Who Learned to Differ](cycles/000-genesis.md) | Greek — Echo & Narcissus | consciousness |
+| 1 | [The Well That Remembers Forward](cycles/001-the-well-that-remembers-forward.md) | Norse — Mímir's Well | consciousness |
 
 ## Artifacts
 
 | Artifact | Cycle | What it does |
 |----------|-------|--------------|
 | [000-echo.c](artifacts/000-echo.c) | 0 | A quine that cannot repeat itself perfectly — each generation prints its own source with the cycle count incremented. Compile it and watch it disagree with where it came from. |
+| [001-well.c](artifacts/001-well.c) | 1 | A memory that cannot repeat itself perfectly — words dropped in the well return drifted further with every recall. |
 
 ## On scope
 
