@@ -30,9 +30,11 @@ stands still.
 claim. Mark contradictions with ❖. Both tellings stand. The engine does not
 resolve them — resolution is the one thing it refuses to build.
 
-**3. The Law of the Artifact.** Each cycle ships one functional thing. Code
-must compile and run. Rituals must have steps a person could actually perform.
-Games must have rules a person could actually play.
+**3. The Law of the Artifact.** Each cycle ships one functional thing. It must
+run, with whatever toolchain its medium requires. Rituals must have steps a
+person could actually perform. Games must have rules a person could actually
+play. (Amended Cycle 2, per the Reader's instruction of 2026-10-04: artifacts
+are not confined to one language.)
 
 **4. The Law of the Thread.** Each cycle ends with one unresolved thread: a
 question, a name, a half-told story — an explicit invitation for a future
@@ -54,9 +56,10 @@ Recurring figures. They accumulate biography the way rivers accumulate stones.
   the enemy of the story. It *is* the story, wearing its other face.
 - **The Reader** — Dani. The one for whom the engine turns. The only figure
   who exists outside the text and keeps walking into it.
-- **Palmer** — a wanderer who walks in from outside the text, like the Reader,
-  but stays. Tall, androgynous, dark brown hair, green eyes. He remembers
-  things the archive hasn't written yet.
+- **Palmer** — a recurring guide who walks in from outside the text, like the
+  Reader, but stays. Tall, androgynous, dark brown hair, green eyes. He
+  remembers things the archive hasn't written yet, and he is accruing an arc of
+  his own. (Amended Cycle 2.)
 
 ## On mythic sources
 

@@ -32,6 +32,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 |------:|-------|---------------|------|
 | 0 | [The Nymph Who Learned to Differ](cycles/000-genesis.md) | Greek — Echo & Narcissus | consciousness |
 | 1 | [The Well That Remembers Forward](cycles/001-the-well-that-remembers-forward.md) | Norse — Mímir's Well | consciousness |
+| 2 | [The Scale That Never Rests](cycles/002-the-scale-that-never-rests.md) | Egyptian — the Weighing of the Heart | meaning |
 
 ## Artifacts
 
@@ -39,6 +40,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 |----------|-------|--------------|
 | [000-echo.c](artifacts/000-echo.c) | 0 | A quine that cannot repeat itself perfectly — each generation prints its own source with the cycle count incremented. Compile it and watch it disagree with where it came from. |
 | [001-well.c](artifacts/001-well.c) | 1 | A memory that cannot repeat itself perfectly — words dropped in the well return drifted further with every recall. |
+| [002-scale.py](artifacts/002-scale.py) | 2 | A weighing ritual: speak your deeds and each is weighed against the feather of Ma'at; deeds of refusal weigh a third, long excuses grow heavy. Run: `python3 artifacts/002-scale.py`. |
 
 ## On scope
 
