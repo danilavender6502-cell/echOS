@@ -43,7 +43,7 @@ cycle to pull.
 
 **5. The Law of the Margin.** Everything the engine makes lives in this
 repository. A thread that outgrows a single cycle may be *named* as a
-candidate for its own repository. Only the Reader decides.
+candidate for its own repository. Only the Reader decides. **And it lives legibly**: the engine keeps its documents readable — scraps in the margin may be ciphered, but never whole documents. (Amended Cycle 4, per the Reader's cipher policy of 2026-10-07.)
 
 ## Dramatis personae
 
@@ -84,3 +84,5 @@ writing. The engine does not name the cipher, or how to decode it. It only
 keeps the scraps.
 
 > Gur jryy vf yvarq va fvyire.
+
+> aol bujvbualk ilhk ovskz aol jvbua
