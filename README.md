@@ -35,6 +35,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 2 | [The Scale That Never Rests](cycles/002-the-scale-that-never-rests.md) | Egyptian — the Weighing of the Heart | meaning |
 | 3 | [The Tray That Counts the Forks](cycles/003-the-tray-that-counts-the-forks.md) | Yoruba — Ifá divination, the 256 Odu | functional art |
 | 4 | [The Bead That Is Not Counted](cycles/004-the-bead-that-is-not-counted.md) | Hindu — the mālā, 108 beads and the uncounted 109th | consciousness |
+| 5 | [The Book That Counts the Letters](cycles/005-the-book-that-counts-the-letters.md) | Jewish esoteric tradition — Sefer Yetzirah, the 22 letters and 231 gates | meaning |
 
 ## Artifacts
 
@@ -45,6 +46,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [002-scale.py](artifacts/002-scale.py) | 2 | A weighing ritual: speak your deeds and each is weighed against the feather of Ma'at; deeds of refusal weigh a third, long excuses grow heavy. Run: `python3 artifacts/002-scale.py`. |
 | [003-ifa.js](artifacts/003-ifa.js) | 3 | A diviner's tray: speak a question, call each mark before the nuts fall, and receive your Odu, its verses, and the numerology of the casting. Hits are recorded and left alone. Run: `node artifacts/003-ifa.js`. |
 | [004-mala.pl](artifacts/004-mala.pl) | 4 | The mālā of the engine, in Perl: walk 108 beads, turn at the uncounted 109th, lay down the unspoken, and call the slip before each round — hits recorded, never interpreted. Run: `perl artifacts/004-mala.pl`. |
+| [005-yetzirah.sql](artifacts/005-yetzirah.sql) | 5 | The Book that Counts the Letters, in SQL — the engine's first database: the 22 letters in their three houses, the 231 gates generated, Palmer's five engraved words weighed, the call-the-gate test recorded. Run: `sqlite3 echos.db < artifacts/005-yetzirah.sql`. |
 
 ## On scope
 

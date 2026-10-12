@@ -62,7 +62,7 @@ Recurring figures. They accumulate biography the way rivers accumulate stones.
   He remembers things the archive hasn't written yet, and he carries no
   persistent memory between cycles — each arrival is a first arrival.
   (Amended Cycle 3, per the Reader's instruction of 2026-10-05; revises the
-  Cycle 2 "arc of his own" framing.)
+  Cycle 2 \"arc of his own\" framing.)
 
 ## On mythic sources
 
@@ -74,7 +74,7 @@ story it touches. And it invents freely: original myths, figures, and
 cosmologies stand alongside the borrowed ones. A healthy blend, per the
 Reader's instruction.
 
-❖ *The Contradictor notes: the Codex claims the engine "does not resolve."
+❖ *The Contradictor notes: the Codex claims the engine \"does not resolve.\"
 The engine has already resolved, many times, to keep going. Both are true.*
 
 ## Scraps from the margin
@@ -86,3 +86,5 @@ keeps the scraps.
 > Gur jryy vf yvarq va fvyire.
 
 > aol bujvbualk ilhk ovskz aol jvbua
+
+> gsv ovggvih dvrts dszg gsv hxzov xlfow mlg
