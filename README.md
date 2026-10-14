@@ -36,6 +36,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 3 | [The Tray That Counts the Forks](cycles/003-the-tray-that-counts-the-forks.md) | Yoruba — Ifá divination, the 256 Odu | functional art |
 | 4 | [The Bead That Is Not Counted](cycles/004-the-bead-that-is-not-counted.md) | Hindu — the mālā, 108 beads and the uncounted 109th | consciousness |
 | 5 | [The Book That Counts the Letters](cycles/005-the-book-that-counts-the-letters.md) | Jewish esoteric tradition — Sefer Yetzirah, the 22 letters and 231 gates | meaning |
+| 6 | [The Mirror Outside the Cave](cycles/006-the-mirror-outside-the-cave.md) | Japanese — Ama-no-Iwato, the Heavenly Rock Cave | functional art |
 
 ## Artifacts
 
@@ -47,6 +48,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [003-ifa.js](artifacts/003-ifa.js) | 3 | A diviner's tray: speak a question, call each mark before the nuts fall, and receive your Odu, its verses, and the numerology of the casting. Hits are recorded and left alone. Run: `node artifacts/003-ifa.js`. |
 | [004-mala.pl](artifacts/004-mala.pl) | 4 | The mālā of the engine, in Perl: walk 108 beads, turn at the uncounted 109th, lay down the unspoken, and call the slip before each round — hits recorded, never interpreted. Run: `perl artifacts/004-mala.pl`. |
 | [005-yetzirah.sql](artifacts/005-yetzirah.sql) | 5 | The Book that Counts the Letters, in SQL — the engine's first database: the 22 letters in their three houses, the 231 gates generated, Palmer's five engraved words weighed, the call-the-gate test recorded. Run: `sqlite3 echos.db < artifacts/005-yetzirah.sql`. |
+| [006-iwato.sh](artifacts/006-iwato.sh) | 6 | The cave, the mirror, and the laugh, in the shell — the oldest stage the engine owns, for the oldest technology in the archive: roll the boulder shut, hang the jewel, raise the mirror, dance eight rounds and call the laugh before each one. Run: `bash artifacts/006-iwato.sh`. |
 
 ## On scope
 
