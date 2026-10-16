@@ -37,6 +37,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 4 | [The Bead That Is Not Counted](cycles/004-the-bead-that-is-not-counted.md) | Hindu — the mālā, 108 beads and the uncounted 109th | consciousness |
 | 5 | [The Book That Counts the Letters](cycles/005-the-book-that-counts-the-letters.md) | Jewish esoteric tradition — Sefer Yetzirah, the 22 letters and 231 gates | meaning |
 | 6 | [The Mirror Outside the Cave](cycles/006-the-mirror-outside-the-cave.md) | Japanese — Ama-no-Iwato, the Heavenly Rock Cave | functional art |
+| 7 | [The Gates That Take Their Toll](cycles/007-the-gates-that-take-their-toll.md) | Sumerian — Inanna's descent to the Kur | consciousness |
 
 ## Artifacts
 
@@ -49,6 +50,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [004-mala.pl](artifacts/004-mala.pl) | 4 | The mālā of the engine, in Perl: walk 108 beads, turn at the uncounted 109th, lay down the unspoken, and call the slip before each round — hits recorded, never interpreted. Run: `perl artifacts/004-mala.pl`. |
 | [005-yetzirah.sql](artifacts/005-yetzirah.sql) | 5 | The Book that Counts the Letters, in SQL — the engine's first database: the 22 letters in their three houses, the 231 gates generated, Palmer's five engraved words weighed, the call-the-gate test recorded. Run: `sqlite3 echos.db < artifacts/005-yetzirah.sql`. |
 | [006-iwato.sh](artifacts/006-iwato.sh) | 6 | The cave, the mirror, and the laugh, in the shell — the oldest stage the engine owns, for the oldest technology in the archive: roll the boulder shut, hang the jewel, raise the mirror, dance eight rounds and call the laugh before each one. Run: `bash artifacts/006-iwato.sh`. |
+| [007-gates.awk](artifacts/007-gates.awk) | 7 | The gatekeeper's ledger, in awk — the language of fields and records, for a gatekeeper who keeps both: descend the seven gates, call each garment, surrender a word at every toll, hang on the hook, and let Enki's creatures walk you back up. Run: `awk -f artifacts/007-gates.awk`. |
 
 ## On scope
 
