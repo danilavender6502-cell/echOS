@@ -1,0 +1,88 @@
+#!/usr/bin/expect -f
+# 009-vayu.exp -- the dispute of the organs, in expect.
+# expect is the language of call and response: you call, and you wait
+# to see what answers. A fitting tongue for Vayu, the wind,
+# who is never summoned and always arrives.
+
+proc scatter {word} {
+    # the wind takes the letters the way it takes roof-thatch: one by one
+    set letters [split $word ""]
+    set out ""
+    while {[llength $letters] > 0} {
+        set i [expr {int(rand() * [llength $letters])}]
+        append out [lindex $letters $i]
+        set letters [lreplace $letters $i $i]
+    }
+    return $out
+}
+
+puts ""
+puts "THE DISPUTE OF THE ORGANS"
+puts "-------------------------"
+puts "Once the organs quarreled over which of them was greatest."
+puts "Speech said: I am the voice. Sight said: I am the witness."
+puts "Hearing said: I am the warning. Mind said: I am the king."
+puts "So each, to prove it, departed from the body for a season."
+puts ""
+foreach organ {speech sight hearing mind} {
+    puts "  $organ departs -- and the body lives on, poorer."
+}
+puts ""
+puts "Then breath rose to leave. And they all -- speech, sight,"
+puts "hearing, mind -- begged it to stay."
+puts "For when breath goes, everything goes."
+puts ""
+puts -nonewline "Speak the seed word the wind will carry: "
+flush stdout
+gets stdin seed
+set seed [string trim $seed]
+if {$seed eq ""} { set seed "vayu" }
+
+set breaths {
+    prana   "the inward breath, which draws the world in"
+    apana   "the downward breath, which lets the world fall"
+    vyana   "the outward breath, which spreads the world wide"
+    udana   "the upward breath, which lifts the world at dawn"
+    samana  "the equalizing breath, which settles every debt but its own"
+}
+
+set carried $seed
+set n 0
+foreach {name desc} $breaths {
+    incr n
+    puts ""
+    puts "Breath $n of 5 -- $name, $desc."
+    puts -nonewline "Call the gust (keep/scatter): "
+    flush stdout
+    gets stdin call
+    set call [string tolower [string trim $call]]
+    if {$call ne "keep" && $call ne "scatter"} { set call "keep" }
+
+    # The wind decides for itself. The call is yours; the answer is not.
+    set will [expr {int(rand() * 2)}]
+    if {$will} {
+        set carried [scatter $carried]
+        set outcome "scatter"
+    } else {
+        set outcome "keep"
+    }
+
+    # The wind answers through a child mouth.
+    set env(CARRIED) $carried
+    spawn sh -c {sleep 1; printf 'the wind returns: %s\n' "$CARRIED"}
+    expect eof
+    wait
+
+    set hit [expr {$call eq $outcome ? "HIT" : "MISS"}]
+    set fh [open "/tmp/vayu-gust-ledger.txt" a]
+    puts $fh "breath $n ($name): called $call, wind $outcome -- $hit"
+    close $fh
+    puts "  you called $call; the wind chose $outcome -- $hit"
+    puts "  (recorded. the ledger does not interpret.)"
+}
+
+puts ""
+puts "Five breaths. The word is no longer yours; it was never the wind's."
+puts "The ledger holds your calls at /tmp/vayu-gust-ledger.txt."
+puts "The wind owes nothing, and nothing is owed it."
+puts ""

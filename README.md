@@ -39,6 +39,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 6 | [The Mirror Outside the Cave](cycles/006-the-mirror-outside-the-cave.md) | Japanese — Ama-no-Iwato, the Heavenly Rock Cave | functional art |
 | 7 | [The Gates That Take Their Toll](cycles/007-the-gates-that-take-their-toll.md) | Sumerian — Inanna's descent to the Kur | consciousness |
 | 8 | [The Fire That Moves the Sun](cycles/008-the-fire-that-moves-the-sun.md) | Mexica — the Fifth Sun at Teotihuacan; the gods' self-sacrifice | meaning |
+| 9 | [The Wind That Owes Nothing](cycles/009-the-wind-that-owes-nothing.md) | Vedic — Vāyu, the five prāṇas, the dispute of the organs | consciousness |
 
 ## Artifacts
 
@@ -53,6 +54,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [006-iwato.sh](artifacts/006-iwato.sh) | 6 | The cave, the mirror, and the laugh, in the shell — the oldest stage the engine owns, for the oldest technology in the archive: roll the boulder shut, hang the jewel, raise the mirror, dance eight rounds and call the laugh before each one. Run: `bash artifacts/006-iwato.sh`. |
 | [007-gates.awk](artifacts/007-gates.awk) | 7 | The gatekeeper's ledger, in awk — the language of fields and records, for a gatekeeper who keeps both: descend the seven gates, call each garment, surrender a word at every toll, hang on the hook, and let Enki's creatures walk you back up. Run: `awk -f artifacts/007-gates.awk`. |
 | [008-teotihuacan.sed](artifacts/008-teotihuacan.sed) | 8 | The divine bonfire, in sed — the language of transformation, for a fire that transforms: call the spark, lay your offerings, and move the sun across the sky in five takings; four raise it, and it will not move until the fifth. Run: `sed -f artifacts/008-teotihuacan.sed`. |
+| [009-vayu.exp](artifacts/009-vayu.exp) | 9 | The dispute of the organs, in expect — the language of call and response: speak a seed word, watch speech, sight, hearing and mind depart one by one, then call the gust five times while the wind scatters or keeps as it wills. Hits are recorded and left alone. Run: `expect -f artifacts/009-vayu.exp`. |
 
 ## On scope
 
