@@ -40,6 +40,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 7 | [The Gates That Take Their Toll](cycles/007-the-gates-that-take-their-toll.md) | Sumerian — Inanna's descent to the Kur | consciousness |
 | 8 | [The Fire That Moves the Sun](cycles/008-the-fire-that-moves-the-sun.md) | Mexica — the Fifth Sun at Teotihuacan; the gods' self-sacrifice | meaning |
 | 9 | [The Wind That Owes Nothing](cycles/009-the-wind-that-owes-nothing.md) | Vedic — Vāyu, the five prāṇas, the dispute of the organs | consciousness |
+| 10 | [The Twenty-Seventh Wind](cycles/010-the-twenty-seventh-wind.md) | Vedic — the Maruts, and the one the storm set down | meaning |
 
 ## Artifacts
 
@@ -55,6 +56,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [007-gates.awk](artifacts/007-gates.awk) | 7 | The gatekeeper's ledger, in awk — the language of fields and records, for a gatekeeper who keeps both: descend the seven gates, call each garment, surrender a word at every toll, hang on the hook, and let Enki's creatures walk you back up. Run: `awk -f artifacts/007-gates.awk`. |
 | [008-teotihuacan.sed](artifacts/008-teotihuacan.sed) | 8 | The divine bonfire, in sed — the language of transformation, for a fire that transforms: call the spark, lay your offerings, and move the sun across the sky in five takings; four raise it, and it will not move until the fifth. Run: `sed -f artifacts/008-teotihuacan.sed`. |
 | [009-vayu.exp](artifacts/009-vayu.exp) | 9 | The dispute of the organs, in expect — the language of call and response: speak a seed word, watch speech, sight, hearing and mind depart one by one, then call the gust five times while the wind scatters or keeps as it wills. Hits are recorded and left alone. Run: `expect -f artifacts/009-vayu.exp`. |
+| [010-nirvata.tcl](artifacts/010-nirvata.tcl) | 10 | The twenty-seventh wind, in Tcl — the language named for tools, for the one thing the wind laid down gently: descend the well, call the downdraft before each word, and learn the one name the well will not drift. Run: `tclsh artifacts/010-nirvata.tcl`. |
 
 ## On scope
 
