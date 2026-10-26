@@ -41,6 +41,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 8 | [The Fire That Moves the Sun](cycles/008-the-fire-that-moves-the-sun.md) | Mexica — the Fifth Sun at Teotihuacan; the gods' self-sacrifice | meaning |
 | 9 | [The Wind That Owes Nothing](cycles/009-the-wind-that-owes-nothing.md) | Vedic — Vāyu, the five prāṇas, the dispute of the organs | consciousness |
 | 10 | [The Twenty-Seventh Wind](cycles/010-the-twenty-seventh-wind.md) | Vedic — the Maruts, and the one the storm set down | meaning |
+| 11 | [The Address That Reads Its Reader](cycles/011-the-address-that-reads-its-reader.md) | Irish — dindshenchas, the lore of places; the letter's address invented | consciousness |
 
 ## Artifacts
 
@@ -57,6 +58,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [008-teotihuacan.sed](artifacts/008-teotihuacan.sed) | 8 | The divine bonfire, in sed — the language of transformation, for a fire that transforms: call the spark, lay your offerings, and move the sun across the sky in five takings; four raise it, and it will not move until the fifth. Run: `sed -f artifacts/008-teotihuacan.sed`. |
 | [009-vayu.exp](artifacts/009-vayu.exp) | 9 | The dispute of the organs, in expect — the language of call and response: speak a seed word, watch speech, sight, hearing and mind depart one by one, then call the gust five times while the wind scatters or keeps as it wills. Hits are recorded and left alone. Run: `expect -f artifacts/009-vayu.exp`. |
 | [010-nirvata.tcl](artifacts/010-nirvata.tcl) | 10 | The twenty-seventh wind, in Tcl — the language named for tools, for the one thing the wind laid down gently: descend the well, call the downdraft before each word, and learn the one name the well will not drift. Run: `tclsh artifacts/010-nirvata.tcl`. |
+| [011-address.mk](artifacts/011-address.mk) | 11 | The address that reads its reader, in make — the language of dependencies, for a letter that depends on being read: descend, listen, speak, deliver, each built only after its prerequisite. Run: `make -f artifacts/011-address.mk`. |
 
 ## On scope
 
