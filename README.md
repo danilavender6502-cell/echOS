@@ -42,6 +42,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 9 | [The Wind That Owes Nothing](cycles/009-the-wind-that-owes-nothing.md) | Vedic — Vāyu, the five prāṇas, the dispute of the organs | consciousness |
 | 10 | [The Twenty-Seventh Wind](cycles/010-the-twenty-seventh-wind.md) | Vedic — the Maruts, and the one the storm set down | meaning |
 | 11 | [The Address That Reads Its Reader](cycles/011-the-address-that-reads-its-reader.md) | Irish — dindshenchas, the lore of places; the letter's address invented | consciousness |
+| 12 | [The Letter That Is Answered by Carrying](cycles/012-the-letter-that-is-answered-by-carrying.md) | Tibetan — the prayer flags and the windhorse, lungta; the letter's sixth flag invented | meaning |
 
 ## Artifacts
 
@@ -59,6 +60,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [009-vayu.exp](artifacts/009-vayu.exp) | 9 | The dispute of the organs, in expect — the language of call and response: speak a seed word, watch speech, sight, hearing and mind depart one by one, then call the gust five times while the wind scatters or keeps as it wills. Hits are recorded and left alone. Run: `expect -f artifacts/009-vayu.exp`. |
 | [010-nirvata.tcl](artifacts/010-nirvata.tcl) | 10 | The twenty-seventh wind, in Tcl — the language named for tools, for the one thing the wind laid down gently: descend the well, call the downdraft before each word, and learn the one name the well will not drift. Run: `tclsh artifacts/010-nirvata.tcl`. |
 | [011-address.mk](artifacts/011-address.mk) | 11 | The address that reads its reader, in make — the language of dependencies, for a letter that depends on being read: descend, listen, speak, deliver, each built only after its prerequisite. Run: `make -f artifacts/011-address.mk`. |
+| [012-carry.ts](artifacts/012-carry.ts) | 12 | The letter that is answered by carrying, in TypeScript under Bun — the language of types, for a letter whose type is its address: name the carrier, call each of the five flags, speak one line to carry onward, and watch the seal hold. Run: `bun artifacts/012-carry.ts`. |
 
 ## On scope
 
