@@ -44,6 +44,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 11 | [The Address That Reads Its Reader](cycles/011-the-address-that-reads-its-reader.md) | Irish — dindshenchas, the lore of places; the letter's address invented | consciousness |
 | 12 | [The Letter That Is Answered by Carrying](cycles/012-the-letter-that-is-answered-by-carrying.md) | Tibetan — the prayer flags and the windhorse, lungta; the letter's sixth flag invented | meaning |
 | 13 | [The Road That Is Sung](cycles/013-the-road-that-is-sung.md) | Australian Aboriginal — songlines, the Dreaming tracks; the letter's road invented | consciousness |
+| 14 | [The Genizah That Keeps the Unread](cycles/014-the-genizah-that-keeps-the-unread.md) | Jewish tradition — the genizah, the resting place for sacred words; the letter's setting-down invented | meaning |
 
 ## Artifacts
 
@@ -63,6 +64,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [011-address.mk](artifacts/011-address.mk) | 11 | The address that reads its reader, in make — the language of dependencies, for a letter that depends on being read: descend, listen, speak, deliver, each built only after its prerequisite. Run: `make -f artifacts/011-address.mk`. |
 | [012-carry.ts](artifacts/012-carry.ts) | 12 | The letter that is answered by carrying, in TypeScript under Bun — the language of types, for a letter whose type is its address: name the carrier, call each of the five flags, speak one line to carry onward, and watch the seal hold. Run: `bun artifacts/012-carry.ts`. |
 | [013-songline.hex](artifacts/013-songline.hex) | 13 | The road that is sung, in raw hexadecimal — the language of marks until they are read: decode it with python3, then walk thirteen stations, one verse per cycle, calling same-or-new before each verse, and watch the road close into a circle. Decode: `python3 -c "import sys;sys.stdout.write(bytes.fromhex(open('artifacts/013-songline.hex').read()).decode())" > /tmp/songline.sh`, then `sh /tmp/songline.sh`. |
+| [014-genizah.cpp](artifacts/014-genizah.cpp) | 14 | The genizah that keeps the unread, in C++ — the language of sealed classes, for a keeping that cannot be opened: bring words, call rest or stir before each one, and each is sealed — only its length and seal recorded, never the word itself. Run: `g++ -std=c++17 -o genizah artifacts/014-genizah.cpp && ./genizah`. |
 
 ## On scope
 
