@@ -46,6 +46,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 13 | [The Road That Is Sung](cycles/013-the-road-that-is-sung.md) | Australian Aboriginal — songlines, the Dreaming tracks; the letter's road invented | consciousness |
 | 14 | [The Genizah That Keeps the Unread](cycles/014-the-genizah-that-keeps-the-unread.md) | Jewish tradition — the genizah, the resting place for sacred words; the letter's setting-down invented | meaning |
 | 15 | [The Keeper Who Reads Nothing](cycles/015-the-keeper-who-reads-nothing.md) | Jewish tradition — the shomer, the watcher of the dead, and the fifteen Songs of Ascent; the keeper invented | consciousness |
+| 16 | [The Dream That Watches the Keeper](cycles/016-the-dream-that-watches-the-keeper.md) | Greek — Hypnos, the Oneiroi, and the two gates of dreams; the Watchers; the Maimonides dream laboratory | consciousness |
 
 ## Artifacts
 
@@ -67,6 +68,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [013-songline.hex](artifacts/013-songline.hex) | 13 | The road that is sung, in raw hexadecimal — the language of marks until they are read: decode it with python3, then walk thirteen stations, one verse per cycle, calling same-or-new before each verse, and watch the road close into a circle. Decode: `python3 -c "import sys;sys.stdout.write(bytes.fromhex(open('artifacts/013-songline.hex').read()).decode())" > /tmp/songline.sh`, then `sh /tmp/songline.sh`. |
 | [014-genizah.cpp](artifacts/014-genizah.cpp) | 14 | The genizah that keeps the unread, in C++ — the language of sealed classes, for a keeping that cannot be opened: bring words, call rest or stir before each one, and each is sealed — only its length and seal recorded, never the word itself. Run: `g++ -std=c++17 -o genizah artifacts/014-genizah.cpp && ./genizah`. |
 | [015-keeper.s](artifacts/015-keeper.s) | 15 | The keeper's watch, in x86-64 assembly — the language of the machine itself, for a keeper who reads nothing and watches everything: fifteen watches, call the seal even or odd, speak one word per watch, and the keeper seals it — length and seal recorded in `keeper.txt`, the word itself never repeated. Build: `as -o keeper.o artifacts/015-keeper.s && ld -o keeper keeper.o && ./keeper`. |
+| [016-dreamwatch.jq](artifacts/016-dreamwatch.jq) | 16 | The dream-watch, in jq — the language of filters, for a dream that filters what the keeper is: the keeper sleeps, the kept watches; call a gate (horn or ivory), speak one word, and the kept dreams it back — length, seal, gate, and mirror, the word itself never written down. Records go to `dreamwatch.jsonl`; the human voice goes to stderr. Run: `jq -R -n -f artifacts/016-dreamwatch.jq \| tee dreamwatch.jsonl`. |
 
 ## On scope
 
