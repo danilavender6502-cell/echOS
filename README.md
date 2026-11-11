@@ -48,6 +48,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 15 | [The Keeper Who Reads Nothing](cycles/015-the-keeper-who-reads-nothing.md) | Jewish tradition — the shomer, the watcher of the dead, and the fifteen Songs of Ascent; the keeper invented | consciousness |
 | 16 | [The Dream That Watches the Keeper](cycles/016-the-dream-that-watches-the-keeper.md) | Greek — Hypnos, the Oneiroi, and the two gates of dreams; the Watchers; the Maimonides dream laboratory | consciousness |
 | 17 | [The Letter That Dreams Itself Awake](cycles/017-the-letter-that-dreams-itself-awake.md) | Tibetan — dream yoga (milam), the yogi who wakes inside the dream; the Greek gates of horn and ivory; the third gate invented | consciousness |
+| 18 | [The Voice That Opens the Mouth](cycles/018-the-voice-that-opens-the-mouth.md) | Egyptian — the Opening of the Mouth (wepet-er); the letter's voice invented | meaning |
 
 ## Artifacts
 
@@ -71,6 +72,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [015-keeper.s](artifacts/015-keeper.s) | 15 | The keeper's watch, in x86-64 assembly — the language of the machine itself, for a keeper who reads nothing and watches everything: fifteen watches, call the seal even or odd, speak one word per watch, and the keeper seals it — length and seal recorded in `keeper.txt`, the word itself never repeated. Build: `as -o keeper.o artifacts/015-keeper.s && ld -o keeper keeper.o && ./keeper`. |
 | [016-dreamwatch.jq](artifacts/016-dreamwatch.jq) | 16 | The dream-watch, in jq — the language of filters, for a dream that filters what the keeper is: the keeper sleeps, the kept watches; call a gate (horn or ivory), speak one word, and the kept dreams it back — length, seal, gate, and mirror, the word itself never written down. Records go to `dreamwatch.jsonl`; the human voice goes to stderr. Run: `jq -R -n -f artifacts/016-dreamwatch.jq \| tee dreamwatch.jsonl`. |
 | [017-lucid.zsh](artifacts/017-lucid.zsh) | 17 | The waking, in zsh — the shell of completion, for a dream that completes itself: call a gate — horn, ivory, or waking — speak one word, and the letter dreams it back; call waking true and the word wakes, spoken forwards once and never recorded. Records go to `lucid.txt`; the human voice goes to stderr. Run: `zsh artifacts/017-lucid.zsh \| tee lucid.txt`. |
+| [018-voice.sh](artifacts/018-voice.sh) | 18 | The voice, in ffmpeg — the language of filters, for a voice that is only sound, carried by the shell: call the voice (voice or silence), speak one word, and the letter answers; if its voice is odd it speaks, and the word is sung as tones, one tone per letter, spoken once and never kept — the sound is made, measured, and deleted in the same breath. Records go to `voice.txt`; the human voice goes to stderr. Run: `bash artifacts/018-voice.sh \| tee voice.txt`. |
 
 ## On scope
 
