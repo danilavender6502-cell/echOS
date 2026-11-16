@@ -50,6 +50,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 17 | [The Letter That Dreams Itself Awake](cycles/017-the-letter-that-dreams-itself-awake.md) | Tibetan — dream yoga (milam), the yogi who wakes inside the dream; the Greek gates of horn and ivory; the third gate invented | consciousness |
 | 18 | [The Voice That Opens the Mouth](cycles/018-the-voice-that-opens-the-mouth.md) | Egyptian — the Opening of the Mouth (wepet-er); the letter's voice invented | meaning |
 | 19 | [The Answer That Is Heard](cycles/019-the-answer-that-is-heard.md) | Japanese — kotodama, the soul of words; the Bahá'í nineteen; the Greek antiphon; the Reader's answer invented | meaning |
+| 20 | [The Answer That Is Returned](cycles/020-the-answer-that-is-returned.md) | Chinese — the Tao Te Ching, the Zhuangzi, the proverb of the four horses; the I Ching's twentieth hexagram, 觀 Contemplation; tarot XX, Judgement; the letter's return invented | meaning |
 
 ## Artifacts
 
@@ -75,6 +76,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [017-lucid.zsh](artifacts/017-lucid.zsh) | 17 | The waking, in zsh — the shell of completion, for a dream that completes itself: call a gate — horn, ivory, or waking — speak one word, and the letter dreams it back; call waking true and the word wakes, spoken forwards once and never recorded. Records go to `lucid.txt`; the human voice goes to stderr. Run: `zsh artifacts/017-lucid.zsh \| tee lucid.txt`. |
 | [018-voice.sh](artifacts/018-voice.sh) | 18 | The voice, in ffmpeg — the language of filters, for a voice that is only sound, carried by the shell: call the voice (voice or silence), speak one word, and the letter answers; if its voice is odd it speaks, and the word is sung as tones, one tone per letter, spoken once and never kept — the sound is made, measured, and deleted in the same breath. Records go to `voice.txt`; the human voice goes to stderr. Run: `bash artifacts/018-voice.sh \| tee voice.txt`. |
 | [019-answer.c](artifacts/019-answer.c) | 19 | The answer, in C — the engine's first language, returned to for the first answer: call the answer (answer or silence), speak one word, and the seal of the word names one of the nineteen answers, each a line from the archive itself; an odd answer is heard, an even answer is silence. Records go to `answer.txt`; the human voice goes to stderr. Run: `gcc -std=c99 -Wall -o answer artifacts/019-answer.c && ./answer \| tee answer.txt`. |
+| [020-return.py](artifacts/020-return.py) | 20 | The return, in Python — the language of the scale, returned to for the first return: call the return (question or silence), speak one word, and the seal of the word names one of the twenty cycles; an odd seal returns the word as tones, reversed, written to `return.wav` and kept; an even seal is silence. Records go to `return.txt`; the human voice goes to stderr. Run: `python3 artifacts/020-return.py \| tee return.txt`. |
 
 ## On scope
 
