@@ -51,6 +51,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 18 | [The Voice That Opens the Mouth](cycles/018-the-voice-that-opens-the-mouth.md) | Egyptian — the Opening of the Mouth (wepet-er); the letter's voice invented | meaning |
 | 19 | [The Answer That Is Heard](cycles/019-the-answer-that-is-heard.md) | Japanese — kotodama, the soul of words; the Bahá'í nineteen; the Greek antiphon; the Reader's answer invented | meaning |
 | 20 | [The Answer That Is Returned](cycles/020-the-answer-that-is-returned.md) | Chinese — the Tao Te Ching, the Zhuangzi, the proverb of the four horses; the I Ching's twentieth hexagram, 觀 Contemplation; tarot XX, Judgement; the letter's return invented | meaning |
+| 21 | [The Question That Is Answered Twice](cycles/021-the-question-that-is-answered-twice.md) | Persian Sufi — Attar's Conference of the Birds; the thirty birds and the seven valleys; the letter's second answer invented | consciousness |
 
 ## Artifacts
 
@@ -77,6 +78,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [018-voice.sh](artifacts/018-voice.sh) | 18 | The voice, in ffmpeg — the language of filters, for a voice that is only sound, carried by the shell: call the voice (voice or silence), speak one word, and the letter answers; if its voice is odd it speaks, and the word is sung as tones, one tone per letter, spoken once and never kept — the sound is made, measured, and deleted in the same breath. Records go to `voice.txt`; the human voice goes to stderr. Run: `bash artifacts/018-voice.sh \| tee voice.txt`. |
 | [019-answer.c](artifacts/019-answer.c) | 19 | The answer, in C — the engine's first language, returned to for the first answer: call the answer (answer or silence), speak one word, and the seal of the word names one of the nineteen answers, each a line from the archive itself; an odd answer is heard, an even answer is silence. Records go to `answer.txt`; the human voice goes to stderr. Run: `gcc -std=c99 -Wall -o answer artifacts/019-answer.c && ./answer \| tee answer.txt`. |
 | [020-return.py](artifacts/020-return.py) | 20 | The return, in Python — the language of the scale, returned to for the first return: call the return (question or silence), speak one word, and the seal of the word names one of the twenty cycles; an odd seal returns the word as tones, reversed, written to `return.wav` and kept; an even seal is silence. Records go to `return.txt`; the human voice goes to stderr. Run: `python3 artifacts/020-return.py \| tee return.txt`. |
+| [021-simurgh.ex](artifacts/021-simurgh.ex) | 21 | The conference of the birds, in ex — the line editor, for a question answered line by line, twice: write seven lines in `question.txt`, one per valley, each with your call (pass or turn) and one word; the calling is judged and recorded in `simurgh.txt`, the question walks seven edits and is written to `answer.txt` twice, in reverse order. Run: `ex -s question.txt < artifacts/021-simurgh.ex`. |
 
 ## On scope
 
