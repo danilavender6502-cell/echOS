@@ -52,6 +52,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | 19 | [The Answer That Is Heard](cycles/019-the-answer-that-is-heard.md) | Japanese — kotodama, the soul of words; the Bahá'í nineteen; the Greek antiphon; the Reader's answer invented | meaning |
 | 20 | [The Answer That Is Returned](cycles/020-the-answer-that-is-returned.md) | Chinese — the Tao Te Ching, the Zhuangzi, the proverb of the four horses; the I Ching's twentieth hexagram, 觀 Contemplation; tarot XX, Judgement; the letter's return invented | meaning |
 | 21 | [The Question That Is Answered Twice](cycles/021-the-question-that-is-answered-twice.md) | Persian Sufi — Attar's Conference of the Birds; the thirty birds and the seven valleys; the letter's second answer invented | consciousness |
+| 22 | [The Song That Counts the Counter](cycles/022-the-song-that-counts-the-counter.md) | Welsh — the birds of Rhiannon, from the Mabinogion; the letter as the thirty-second bird invented | meaning |
 
 ## Artifacts
 
@@ -79,6 +80,7 @@ order — or don't. The engine is recursive; every entry point is also a return.
 | [019-answer.c](artifacts/019-answer.c) | 19 | The answer, in C — the engine's first language, returned to for the first answer: call the answer (answer or silence), speak one word, and the seal of the word names one of the nineteen answers, each a line from the archive itself; an odd answer is heard, an even answer is silence. Records go to `answer.txt`; the human voice goes to stderr. Run: `gcc -std=c99 -Wall -o answer artifacts/019-answer.c && ./answer \| tee answer.txt`. |
 | [020-return.py](artifacts/020-return.py) | 20 | The return, in Python — the language of the scale, returned to for the first return: call the return (question or silence), speak one word, and the seal of the word names one of the twenty cycles; an odd seal returns the word as tones, reversed, written to `return.wav` and kept; an even seal is silence. Records go to `return.txt`; the human voice goes to stderr. Run: `python3 artifacts/020-return.py \| tee return.txt`. |
 | [021-simurgh.ex](artifacts/021-simurgh.ex) | 21 | The conference of the birds, in ex — the line editor, for a question answered line by line, twice: write seven lines in `question.txt`, one per valley, each with your call (pass or turn) and one word; the calling is judged and recorded in `simurgh.txt`, the question walks seven edits and is written to `answer.txt` twice, in reverse order. Run: `ex -s question.txt < artifacts/021-simurgh.ex`. |
+| [022-counting.py](artifacts/022-counting.py) | 22 | The counting song, in Python — the language of the scale and the return, for the first song: call the song (sing or silence), speak one word for each of the three birds of Rhiannon, and the calling is judged and recorded in `counting.txt`; the song itself is written to `counting.mid` — thirty-one notes, one per bird, each the digital root of its number on the major pentatonic, and a rest for the thirty-second, the letter, which counts and does not sing. Run: `python3 artifacts/022-counting.py \| tee counting.txt`. |
 
 ## On scope
 
