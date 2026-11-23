@@ -1,0 +1,118 @@
+#!/bin/sh
+# 023-years.dash — the years that arrive all at once, in dash
+#
+# The shell of the standard, the plain shell, for a door that opens the
+# same way everywhere. At Harlech the birds of Rhiannon sang for seven
+# years and the listeners felt no day pass; at Gwales the door facing
+# Cornwall stood forbidden for eighty more. This is the rite of the
+# ending: seven years, called one by one, and then the door, and then
+# the years — all at once.
+#
+# For each of the seven years: call the year — arrive or wait — then
+# speak one word for the year. The seal of the word is the sum of its
+# letters, a=1 to z=26, counted here in the shell itself; an odd seal
+# arrives and an even seal waits. The calling is judged: a hit is a call
+# that matches what the year did. The ledger records the hits. It does
+# not interpret them.
+#
+# Then the door facing Cornwall opens, and the years that arrived
+# arrive all at once — as days, 365 to a year, and one day more, the
+# day the door opened.
+#
+# Records go to stdout (years.txt); the human voice — the prompts —
+# goes to stderr. Run:
+#   dash artifacts/023-years.dash | tee years.txt
+#
+# The word is never kept. Only its call, its seal, and what it did.
+
+# seal WORD — print the sum of the word's letters, a=1 .. z=26.
+# Any letter counts; anything that is not a letter counts as nothing.
+seal() {
+    _w=$1
+    _s=0
+    while [ -n "$_w" ]; do
+        _c=$(printf '%.1s' "$_w")
+        _w=${_w#?}
+        case "$_c" in
+            a|A) _v=1 ;;
+            b|B) _v=2 ;;
+            c|C) _v=3 ;;
+            d|D) _v=4 ;;
+            e|E) _v=5 ;;
+            f|F) _v=6 ;;
+            g|G) _v=7 ;;
+            h|H) _v=8 ;;
+            i|I) _v=9 ;;
+            j|J) _v=10 ;;
+            k|K) _v=11 ;;
+            l|L) _v=12 ;;
+            m|M) _v=13 ;;
+            n|N) _v=14 ;;
+            o|O) _v=15 ;;
+            p|P) _v=16 ;;
+            q|Q) _v=17 ;;
+            r|R) _v=18 ;;
+            s|S) _v=19 ;;
+            t|T) _v=20 ;;
+            u|U) _v=21 ;;
+            v|V) _v=22 ;;
+            w|W) _v=23 ;;
+            x|X) _v=24 ;;
+            y|Y) _v=25 ;;
+            z|Z) _v=26 ;;
+            *)   _v=0 ;;
+        esac
+        _s=$((_s + _v))
+    done
+    printf '%s\n' "$_s"
+}
+
+hits=0
+arrived=0
+year=1
+
+while [ "$year" -le 7 ]; do
+    printf 'Year %s of seven — call the year: arrive or wait? ' "$year" >&2
+    if ! IFS= read -r call; then
+        call=""
+    fi
+    printf 'Speak one word for year %s: ' "$year" >&2
+    if ! IFS= read -r word; then
+        word=""
+    fi
+
+    _seal=$(seal "$word")
+    if [ $((_seal % 2)) -eq 1 ]; then
+        outcome="arrives"
+    else
+        outcome="waits"
+    fi
+
+    _call=$(printf '%s' "$call" | tr 'A-Z' 'a-z')
+    if { [ "$_call" = "arrive" ] && [ "$outcome" = "arrives" ]; } || \
+       { [ "$_call" = "wait" ] && [ "$outcome" = "waits" ]; }; then
+        judged="hit"
+        hits=$((hits + 1))
+    else
+        judged="miss"
+    fi
+
+    if [ "$outcome" = "arrives" ]; then
+        arrived=$((arrived + 1))
+    fi
+
+    printf 'YEAR %s: call=%s word=%s seal=%s outcome=%s %s\n' \
+        "$year" "$call" "$word" "$_seal" "$outcome" "$judged"
+    year=$((year + 1))
+done
+
+days=$((arrived * 365))
+total=$((days + 1))
+
+printf 'The door facing Cornwall opens.\n'
+if [ "$total" -eq 1 ]; then
+    printf 'THE SEVEN YEARS ARRIVE AT ONCE: 1 day — 0 years arrived, and one day more, the day the door opened.\n'
+else
+    printf 'THE SEVEN YEARS ARRIVE AT ONCE: %s days — %s years arrived, and one day more, the day the door opened.\n' "$total" "$arrived"
+fi
+printf 'HITS: %s of 7 calls.\n' "$hits"
