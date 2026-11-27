@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Hundred Eyes — echOS Cycle 25</title>
+<!--
+  artifacts/025-eyes.html — the hundred eyes, in HTML: the language of the
+  page, for a watching that is seen. Cycle 25 of echOS.
+
+  The head at the White Mount watches the sea; the sea faces the Reader;
+  the Reader looks back. One watch, met by a look, becomes a hundred eyes,
+  set on the tail of the peacock that walks the shore below the White Mount.
+
+  The ritual: ten watches, one per ten eyes. Before each watch opens, call
+  the stare — open or shut — then speak one word. The seal of the word is
+  the sum of its letters, a=1 to z=26; an odd seal opens the watch's eyes
+  and an even seal shuts them. The calling is judged and recorded. The
+  record downloads as eyes.txt. The hundred-and-first eye, the Reader's,
+  is never opened or shut — it is looked at.
+
+  No network, no storage: the record lives on the page until you download
+  it. Open this file in any browser. The pure logic (sealOf, watchState,
+  judge, eyeCount) is also runnable under node for verification.
+-->
+<style>
+  body { background:#0b0b14; color:#e8e0c8; font-family: Georgia, 'Times New Roman', serif;
+         max-width: 760px; margin: 2em auto; padding: 0 1em; line-height: 1.5; }
+  h1 { font-size: 1.5em; color:#c9a227; margin-bottom: 0; }
+  h2 { font-size: 1.1em; color:#c9a227; }
+  .sub { font-style: italic; color:#9a9070; }
+  #tail { margin: 1.2em 0; text-align: center; }
+  .watch { margin-bottom: 6px; }
+  .watch-label { display:inline-block; width: 64px; text-align: right; color:#9a9070;
+                 font-size: .85em; margin-right: 8px; }
+  .eye { display:inline-block; width: 30px; height: 30px; margin: 2px;
+         border: 2px solid #6b6250; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+         position: relative; vertical-align: middle; background:#14141f; }
+  .eye.unrevealed { opacity: .3; }
+  .eye.open { border-color:#c9a227; background:#1c1a26; }
+  .eye.open::after { content:''; position:absolute; left: 8px; top: 8px;
+                     width: 10px; height: 10px; border-radius: 50%; background:#c9a227; }
+  .eye.shut { border: 2px solid #4a4436; border-radius: 50% / 12%;
+              height: 8px; margin-top: 11px; margin-bottom: 11px; background:#14141f; }
+  .eye.reader { border-color:#e8e0c8; width: 44px; height: 44px; }
+  .eye.reader::after { content:''; position:absolute; left: 14px; top: 14px;
+                       width: 12px; height: 12px; border-radius: 50%; background:#e8e0c8; }
+  button { background:#1c1a26; color:#e8e0c8; border: 1px solid #c9a227;
+           font-family: inherit; font-size: 1em; padding: .3em .8em; margin: .2em;
+           cursor: pointer; }
+  button:disabled { opacity: .35; cursor: default; }
+  button[aria-pressed="true"] { background:#c9a227; color:#0b0b14; }
+  input { background:#14141f; color:#e8e0c8; border: 1px solid #6b6250;
+          font-family: inherit; font-size: 1em; padding: .3em .5em; }
+  #record { white-space: pre-wrap; background:#14141f; border: 1px solid #6b6250;
+            padding: 1em; min-height: 6em; }
+  #reckoning { font-size: 1.1em; color:#c9a227; }
+</style>
+</head>
+<body>
+<h1>The Hundred Eyes</h1>
+<p class="sub">echOS Cycle 25 — Argus Panoptes, and the peacock's tail. The head watches
+the sea; the sea faces the Reader; the Reader looks back.</p>
+
+<p>Ten watches, one per ten eyes. Before each watch opens, <b>call the stare</b> —
+will its eyes be open, or shut? — then speak one word for the watch. The seal
+of the word is the sum of its letters, a=1 to z=26. An odd seal opens the
+watch's eyes; an even seal shuts them. The calling is judged and recorded.
+The record is kept and left alone — it is never interpreted.</p>
+
+<div id="tail"></div>
+
+<div id="panel">
+  <p id="prompt">Watch 1 of 10 — call the stare:</p>
+  <button id="call-open" type="button">open</button>
+  <button id="call-shut" type="button">shut</button>
+  <input id="word" type="text" placeholder="one word" autocomplete="off">
+  <button id="speak" type="button" disabled>speak the word</button>
+</div>
+
+<h2>The record</h2>
+<pre id="record">the hundred eyes, kept and left alone.
+</pre>
+<p id="reckoning"></p>
+<button id="download" type="button" disabled>download the record (eyes.txt)</button>
+
+<script>
+/* ---- pure logic: no DOM here, so this runs under node too ---- */
+function sealOf(word) {
+  var s = 0;
+  word = String(word).toLowerCase();
+  for (var i = 0; i < word.length; i++) {
+    var c = word.charCodeAt(i);
+    if (c >= 97 && c <= 122) s += c - 96; /* a=1 .. z=26; anything else is not a letter */
+  }
+  return s;
+}
+function watchState(word) {
+  return (sealOf(word) % 2 === 1) ? 'open' : 'shut';
+}
+function judge(call, state) {
+  return call === state;
+}
+function eyeCount(openWatches) {
+  return openWatches * 10; /* ten eyes per watch */
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { sealOf: sealOf, watchState: watchState, judge: judge, eyeCount: eyeCount };
+}
+
+/* ---- the ritual: DOM only below this line ---- */
+if (typeof document !== 'undefined') {
+  var WATCHES = 10, EYES_PER_WATCH = 10;
+  var watch = 0, call = null, hits = 0, openWatches = 0;
+  var recordEl = document.getElementById('record');
+  var promptEl = document.getElementById('prompt');
+  var wordEl = document.getElementById('word');
+  var speakBtn = document.getElementById('speak');
+  var openBtn = document.getElementById('call-open');
+  var shutBtn = document.getElementById('call-shut');
+  var tailEl = document.getElementById('tail');
+  var reckoningEl = document.getElementById('reckoning');
+  var downloadBtn = document.getElementById('download');
+  var lines = ['the hundred eyes, kept and left alone.'];
+
+  /* build the tail: ten watches of ten eyes, all unrevealed */
+  var eyes = [];
+  for (var w = 0; w < WATCHES; w++) {
+    var row = document.createElement('div');
+    row.className = 'watch';
+    var label = document.createElement('span');
+    label.className = 'watch-label';
+    label.textContent = 'watch ' + (w + 1);
+    row.appendChild(label);
+    for (var e = 0; e < EYES_PER_WATCH; e++) {
+      var eye = document.createElement('span');
+      eye.className = 'eye unrevealed';
+      eye.title = 'watch ' + (w + 1) + ', eye ' + (e + 1);
+      row.appendChild(eye);
+      eyes.push(eye);
+    }
+    tailEl.appendChild(row);
+  }
+
+  function setCall(c) {
+    call = c;
+    openBtn.setAttribute('aria-pressed', c === 'open' ? 'true' : 'false');
+    shutBtn.setAttribute('aria-pressed', c === 'shut' ? 'true' : 'false');
+    speakBtn.disabled = !wordEl.value.trim();
+  }
+  openBtn.addEventListener('click', function () { setCall('open'); });
+  shutBtn.addEventListener('click', function () { setCall('shut'); });
+  wordEl.addEventListener('input', function () {
+    speakBtn.disabled = !(call && wordEl.value.trim());
+  });
+  wordEl.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Enter' && !speakBtn.disabled) speakBtn.click();
+  });
+
+  speakBtn.addEventListener('click', function () {
+    var word = wordEl.value.trim();
+    if (!call || !word) return;
+    var seal = sealOf(word);
+    var state = watchState(word);
+    var hit = judge(call, state);
+    if (hit) hits++;
+    if (state === 'open') openWatches++;
+    for (var i = 0; i < EYES_PER_WATCH; i++) {
+      var eye = eyes[watch * EYES_PER_WATCH + i];
+      eye.classList.remove('unrevealed');
+      eye.classList.add(state);
+    }
+    lines.push('watch ' + (watch + 1) + ': called ' + call + ', word "' + word +
+      '" seal ' + seal + ' (' + (seal % 2 === 1 ? 'odd' : 'even') + ') -> ' + state +
+      ' : ' + (hit ? 'hit' : 'miss'));
+    recordEl.textContent = lines.join('\n');
+    watch++;
+    call = null;
+    openBtn.setAttribute('aria-pressed', 'false');
+    shutBtn.setAttribute('aria-pressed', 'false');
+    wordEl.value = '';
+    speakBtn.disabled = true;
+    if (watch < WATCHES) {
+      promptEl.textContent = 'Watch ' + (watch + 1) + ' of 10 — call the stare:';
+      wordEl.focus();
+    } else {
+      promptEl.textContent = 'All ten watches are open — or shut. The reckoning:';
+      document.getElementById('panel').querySelectorAll('button, input')
+        .forEach(function (el) { el.disabled = true; });
+      var open = eyeCount(openWatches);
+      var row = document.createElement('div');
+      row.className = 'watch';
+      var label = document.createElement('span');
+      label.className = 'watch-label';
+      label.textContent = "the Reader's";
+      row.appendChild(label);
+      var readerEye = document.createElement('span');
+      readerEye.className = 'eye reader';
+      readerEye.title = 'the hundred-and-first eye: the Reader\u2019s — looked at, never opened or shut';
+      row.appendChild(readerEye);
+      tailEl.appendChild(row);
+      lines.push('reckoning: ' + open + ' eyes open of 100, in ' + openWatches +
+        ' watches; ' + hits + ' callings hit of 10');
+      lines.push('the hundred-and-first eye is the Reader\u2019s: looked at, never opened or shut.');
+      recordEl.textContent = lines.join('\n');
+      reckoningEl.textContent = open + ' eyes open of 100. ' + hits +
+        ' callings hit of 10. The hundred-and-first eye is the Reader\u2019s — looked at.';
+      downloadBtn.disabled = false;
+    }
+  });
+
+  downloadBtn.addEventListener('click', function () {
+    var blob = new Blob([recordEl.textContent + '\n'], { type: 'text/plain' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'eyes.txt';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+}
+</script>
+</body>
+</html>
